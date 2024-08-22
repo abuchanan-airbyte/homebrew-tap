@@ -2,7 +2,7 @@ class Abctl < Formula
   desc "Abuchanan's test for abctl"
   homepage "https://github.com/abuchanan-airbyte/abctl"
   url "https://github.com/abuchanan-airbyte/abctl.git",
-      tag "v0.0.1"
+      tag: "v0.0.1"
   
   license "MIT"
 
