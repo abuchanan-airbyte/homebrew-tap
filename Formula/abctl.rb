@@ -1,9 +1,10 @@
 class Abctl < Formula
+  ABCTL_VERSION = "v0.0.6".freeze
+
   desc "Abuchanan's test for abctl"
   homepage "https://github.com/abuchanan-airbyte/abctl"
   url "https://github.com/abuchanan-airbyte/abctl.git",
-      tag:      "v0.0.6",
-      revision: "317761b8e152b3c416b7fe90b2332baf6ef599cf"
+      tag: ABCTL_VERSION
 
   license "MIT"
 
@@ -15,12 +16,12 @@ class Abctl < Formula
   depends_on "go" => :build
 
   def install
-    ENV["ABCTL_VERSION"] = "v0.0.1"
+    ENV["ABCTL_VERSION"] = ABCTL_VERSION
     system "make", "build"
     bin.install "build/abctl"
   end
 
   test do
-    assert_match "version: v0.0.1", shell_output("#{bin}/abctl version").strip
+    assert_equal "version: #{ABCTL_VERSION}", shell_output("#{bin}/abctl version").lines[0].strip
   end
 end
