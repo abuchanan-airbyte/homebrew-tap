@@ -1,5 +1,5 @@
 class Abctl < Formula
-  ABCTL_VERSION = "v0.0.19".freeze
+  ABCTL_VERSION = "v0.0.23".freeze
 
   desc "Abuchanan's test for abctl"
   homepage "https://github.com/abuchanan-airbyte/abctl"
